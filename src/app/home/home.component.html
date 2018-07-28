@@ -1,0 +1,186 @@
+<header id="header" class="jumbotron bg-dark d-flex align-items-center mb-5"><!-- header -->
+  <div class="container">
+    <div class="headings" style="display: inline-block;">
+      <h1 class="display-4 font-weight-bold text-white">
+        Personal Trainer<br>
+        based in London
+      </h1>
+      <h2 class="text-light">
+        Hello, I'm Kimi Parrag
+      </h2>
+      <div class="w-100 text-center mt-5">
+        <a role="button" [ngx-scroll-to]="'#about'">
+          <svg width="25px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+            <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#68b882;stroke-width:20px;"/>
+            <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#68b882;stroke-width:24px;"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header><!-- end header -->
+
+<section id="about" class="container d-flex  align-items-center"><!-- about section -->
+  <div class="row align-items-center">
+    <div class="col-md-6 p-5">
+      <img src="../assets/about.jpg" alt="" class="img-fluid">
+    </div>
+    <div class="col-md-6 px-5 text-center">
+      <h2 class="heading-title">
+        About me
+      </h2>
+      <p class="text-justify small">
+        Hi, my name is Kimi Parrag, and I am an experienced Personal Trainer based in London.<br>
+        <br>
+        I have always been into keeping fit, particularly athletics and gymnastics.
+        Working with clients, I effectively introduce exercise and nutritional behaviour into daily life
+        to promote an overall better quality of life.<br>
+        As a Personal Trainer I care, support and train a broad range of clients:<br>
+        busy professionals, housewives (or husbands!), pre and post natal women,
+        sports people, younger and older adults to name just a few.<br>
+        <br>
+        I am part of the Active Ageing Programme.
+        I am interested in balancing and strengthening the connection between the mind and body - making you
+        fitter and healthier both physically and mentally.
+        <br><a routerLink="/about">Read more</a>
+      </p>
+      <p class="py-4">
+        <a [ngx-scroll-to]="'#points'" class="btn btn-outline-secondary">About my fitness programme</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section id="points" class="jumbotron bg-light d-flex align-items-center mb-0"><!-- about section -->
+  <div class="container"><!-- about section -->
+    <div class="row">
+      <div class="col-12">
+        <h5>
+          Key points
+        </h5>
+      </div>
+    </div>
+    <ul class="row d-flex justify-content-between small">
+      <li class="col-md-4 py-1">
+        Toning and muscle conditioning
+      </li>
+      <li class="col-md-4 py-1">
+        Core stability
+      </li>
+      <li class="col-md-4 py-1">
+        Weight management
+      </li>
+      <li class="col-md-4 py-1">
+        Rehabilitation
+      </li>
+      <li class="col-md-4 py-1">
+        Pre- and post-natal fitness
+      </li>
+      <li class="col-md-4 py-1">
+        Nutrition advice
+      </li>
+      <li class="col-md-4 py-1">
+        Posture correction
+      </li>
+      <li class="col-md-4 py-1">
+        Older adults: independent, chair-based, frail
+      </li>
+      <li class="col-md-4 py-1">
+        Cardio fitness
+      </li>
+      <li class="col-md-4 py-1">
+        Motivation and support
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="programs" class="jumbotron bg-gray d-flex align-items-center text-center">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4 col-sm-12">
+        <h2 class="heading-title">
+          Choose a program
+        </h2>
+      </div>
+      <div class="col-md-6 offset-md-2 col-sm-12">
+            <div class="row">
+              <div class="col-md-4 px-4 my-2">
+                <a href="#">
+                  Fitness
+                </a>
+                <p class="small">
+                    Some quick text goes here.
+                </p>
+              </div>
+              <div class="col-md-4 px-4 my-2">
+                <a href="#">
+                  Nutrition
+                </a>
+                <p class="small">
+                    Some quick text goes here.
+                </p>
+              </div>
+              <div class="col-md-4 px-4 my-2">
+                <a href="#">
+                  Rehabilitation
+                </a>
+                <p class="small">
+                    Some quick text goes here.
+                </p>
+              </div>
+              <div class="col-md-4 px-4 my-2">
+                <a href="#">
+                  Conditioning
+                </a>
+                <p class="small">
+                    Some quick text goes here.
+                </p>
+              </div>
+              <div class="col-md-4 px-4 my-2">
+                <a href="#">
+                    Cardio
+                </a>
+                <p class="small">
+                    Some quick text goes here.
+                </p>
+              </div>
+              <div class="col-md-4 px-4 my-2">
+                <a href="#">
+                  Older adults
+                </a>
+                <p class="small">
+                    Some quick text goes here.
+                </p>
+              </div>
+            </div>
+      </div><!-- end col -->
+    </div><!-- end row -->
+  </div>
+</section>
+
+<section id="appointment" class="jumbotron bg-white text-center mb-0">
+  <div class="container">
+    <div class="row pb-5">
+      <div class="col-12">
+        <h2 class="text-primary">
+          Book an appointment
+        </h2>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-md-6 col-sm-12 pb-4">
+        <ngb-datepicker #dp class="bg-white shadow"></ngb-datepicker>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h5>
+          Book a free appointment for an advice
+        </h5>
+        <p>
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

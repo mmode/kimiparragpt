@@ -1,0 +1,58 @@
+@import '~bootstrap/scss/functions', '~bootstrap/scss/variables', '~bootstrap/scss/mixins';
+
+.nav-item {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.dropdown-menu {
+    padding: 0;
+}
+.dropdown-item {
+    font-size: 0.8rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+.dropdown-item:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+
+@include media-breakpoint-down(md) {
+    .sidenav {
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        width: 300px;
+        max-width: 70vw;
+        padding: 2rem;
+        background-color: #fff;
+        box-shadow: $box-shadow-lg;
+        z-index: $zindex-fixed;
+
+        .nav-link { // Assign ".sidenav .nav-link" colors scheme of ".navbar .navbar-light"
+            color: $navbar-light-color;
+    
+            @include hover-focus {
+                color: $navbar-light-hover-color;
+            }
+    
+            &.disabled {
+                color: $navbar-light-disabled-color;
+            }
+        }
+    }
+}
+
+.sidenav-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: $zindex-fixed;
+}

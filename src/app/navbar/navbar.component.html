@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg" [ngClass]="[rla.isActive ? 'fixed-top navbar-dark bg-transparent' : 'navbar-light bg-white border-bottom']" >
+  <div class="container">
+    <a
+     class="navbar-brand"
+     routerLink=""
+     routerLinkActive
+     [routerLinkActiveOptions]="{exact: true}"
+     #rla="routerLinkActive">
+      Kimi Parrag
+    </a>
+    <button
+     class="navbar-toggler"
+     type="button"
+     (click)="isNavbarCollapsed = !isNavbarCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ng-container *ngTemplateOutlet="navbarContent"></ng-container>
+    </div>
+  </div>
+</nav>
+
+<div [ngbCollapse]="isNavbarCollapsed" class="sidenav-backdrop d-lg-none" (click)="isNavbarCollapsed = !isNavbarCollapsed"></div>
+<div [ngbCollapse]="isNavbarCollapsed" class="sidenav d-lg-none">
+  <ng-container *ngTemplateOutlet="navbarContent"></ng-container>
+</div>
+
+<!-- template rendered inside navbar for lg screen and sidenav for sm screen -->
+<ng-template #navbarContent>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item text-right d-lg-none">
+      <a class="nav-link" role="button" (click)="isNavbarCollapsed = !isNavbarCollapsed">
+        <fa-icon class="lead" [icon]="faTimes"></fa-icon>
+      </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link" routerLink="">
+        Home
+      </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/about">
+        About me
+      </a>
+    </li>
+    <li class="nav-item dropdown">
+      <div ngbDropdown class="d-inline-block">
+        <a ngbDropdownToggle id="navbarDropdown" class="nav-link dropdown-toggle" role="button" aria-haspopup="true">
+          Services
+        </a>
+        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Fitness</a>
+          <a class="dropdown-item" href="#">Nutrition</a>
+          <a class="dropdown-item" href="#">Rehabilitation</a>
+        </div>
+      </div>
+    </li>
+    <li class="nav-item" routerLinkActive="">
+      <a class="nav-link disabled" routerLink="">Contact</a>
+    </li>
+    <li class="nav-item" routerLinkActive="">
+      <a class="nav-link disabled" routerLink="">Blog</a>
+    </li>
+    <li class="nav-item">
+      <span class="nav-link d-inline-block">
+        Appointment 
+      </span>
+        <a class="btn btn-primary rounded-circle" [ngx-scroll-to]="'#appointment'">
+          <fa-icon [icon]="faCalendarAlt"></fa-icon>
+        </a>
+    </li>
+  </ul>
+</ng-template>
